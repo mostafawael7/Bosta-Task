@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1CF3AE172CFD06EE009EDB8D /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 1CF3AE162CFD06EE009EDB8D /* CombineCocoa */; };
+		1CF3AE1A2CFD0827009EDB8D /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 1CF3AE192CFD0827009EDB8D /* CombineMoya */; };
+		1CF3AE1C2CFD0827009EDB8D /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 1CF3AE1B2CFD0827009EDB8D /* Moya */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		1CF3ADF32CFCF9D3009EDB8D /* Bosta Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bosta Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +42,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CF3AE1A2CFD0827009EDB8D /* CombineMoya in Frameworks */,
+				1CF3AE172CFD06EE009EDB8D /* CombineCocoa in Frameworks */,
+				1CF3AE1C2CFD0827009EDB8D /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +87,9 @@
 			);
 			name = "Bosta Task";
 			packageProductDependencies = (
+				1CF3AE162CFD06EE009EDB8D /* CombineCocoa */,
+				1CF3AE192CFD0827009EDB8D /* CombineMoya */,
+				1CF3AE1B2CFD0827009EDB8D /* Moya */,
 			);
 			productName = "Bosta Task";
 			productReference = 1CF3ADF32CFCF9D3009EDB8D /* Bosta Task.app */;
@@ -107,6 +119,10 @@
 			);
 			mainGroup = 1CF3ADEA2CFCF9D3009EDB8D;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				1CF3AE152CFD06EE009EDB8D /* XCRemoteSwiftPackageReference "CombineCocoa" */,
+				1CF3AE182CFD0827009EDB8D /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1CF3ADF42CFCF9D3009EDB8D /* Products */;
 			projectDirPath = "";
@@ -148,11 +164,13 @@
 				DEVELOPMENT_TEAM = 8L5UY227ZD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Bosta Task/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Bosta;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -160,9 +178,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Hendawi.Bosta-Task";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -176,11 +198,13 @@
 				DEVELOPMENT_TEAM = 8L5UY227ZD;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Bosta Task/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Bosta;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -188,9 +212,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Hendawi.Bosta-Task";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -335,6 +363,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1CF3AE152CFD06EE009EDB8D /* XCRemoteSwiftPackageReference "CombineCocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CombineCommunity/CombineCocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.1;
+			};
+		};
+		1CF3AE182CFD0827009EDB8D /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1CF3AE162CFD06EE009EDB8D /* CombineCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CF3AE152CFD06EE009EDB8D /* XCRemoteSwiftPackageReference "CombineCocoa" */;
+			productName = CombineCocoa;
+		};
+		1CF3AE192CFD0827009EDB8D /* CombineMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CF3AE182CFD0827009EDB8D /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = CombineMoya;
+		};
+		1CF3AE1B2CFD0827009EDB8D /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1CF3AE182CFD0827009EDB8D /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1CF3ADEB2CFCF9D3009EDB8D /* Project object */;
 }
