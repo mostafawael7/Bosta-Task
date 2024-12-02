@@ -2,47 +2,21 @@
 //  NetworkManager.swift
 //  Bosta Task
 //
-//  Created by Hendawi on 01/12/2024.
+//  Created by Hendawi on 02/12/2024.
 //
 
 import Foundation
-import Moya
+import Combine
 
-enum NetworkManager: TargetType {
-    case getUser(id: Int)
-    case getAlbums(id: Int)
-    case getPhotos(id: Int)
+class APIService {
+    static let shared = APIService()
+    private init() {}
     
-    var baseURL: URL {
-        return URL(string: "https://jsonplaceholder.typicode.com")!
-    }
-    
-    var path: String {
-        switch self {
-        case .getUser(let userID):
-            return "/users/\(userID)" // Retrieve User by UserID
-        case .getAlbums(let userID):
-            return "/albums/\(userID)" // Retrieve Albums of user by UserID
-        case .getPhotos(let albumID):
-            return "/photos/\(albumID)" // Retrieve Photos in Album by AlbumID
-        }
-    }
-    
-    var method: Moya.Method {
-        switch self {
-        case .getUser, .getAlbums, .getPhotos:
-            return .get
-        }
-    }
-    
-    var task: Task {
-        switch self {
-        case .getUser, .getAlbums, .getPhotos:
-            return .requestPlain
-        }
-    }
-    
-    var headers: [String: String]? {
-        return ["Content-Type": "application/json"]
+    func fetch<T: Decodable>(from url: URL) -> AnyPublisher<T, Error> {
+        return URLSession.shared.dataTaskPublisher(for: url)
+            .map(\.data)
+            .decode(type: T.self, decoder: JSONDecoder())
+            .receive(on: DispatchQueue.main)
+            .eraseToAnyPublisher()
     }
 }

@@ -1,20 +1,20 @@
 //
-//  UserViewModel.swift
+//  AlbumsViewModel.swift
 //  Bosta Task
 //
-//  Created by Hendawi on 01/12/2024.
+//  Created by Hendawi on 02/12/2024.
 //
 
 import Combine
 
-class UserViewModel {
-    @Published var user: User?
+class AlbumsViewModel {
+    @Published var albums: [Album]?
     @Published var errorMessage: String?
 
     private var cancellables = Set<AnyCancellable>()
 
-    func fetchUser(by id: Int) {
-        guard let url = URLBuilder.user(by: id) else {
+    func fetchAlbums(by userID: Int) {
+        guard let url = URLBuilder.albums(by: userID) else {
             self.errorMessage = "Invalid URL"
             return
         }
@@ -27,8 +27,8 @@ class UserViewModel {
                 case .finished:
                     break
                 }
-            }, receiveValue: { [weak self] (user: User) in
-                self?.user = user
+            }, receiveValue: { [weak self] (albums: [Album]) in
+                self?.albums = albums
             })
             .store(in: &cancellables)
     }

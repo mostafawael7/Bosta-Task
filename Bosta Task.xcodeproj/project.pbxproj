@@ -6,12 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		1CF3AE172CFD06EE009EDB8D /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 1CF3AE162CFD06EE009EDB8D /* CombineCocoa */; };
-		1CF3AE1A2CFD0827009EDB8D /* CombineMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 1CF3AE192CFD0827009EDB8D /* CombineMoya */; };
-		1CF3AE1C2CFD0827009EDB8D /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 1CF3AE1B2CFD0827009EDB8D /* Moya */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
 		1CF3ADF32CFCF9D3009EDB8D /* Bosta Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bosta Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -42,9 +36,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CF3AE1A2CFD0827009EDB8D /* CombineMoya in Frameworks */,
-				1CF3AE172CFD06EE009EDB8D /* CombineCocoa in Frameworks */,
-				1CF3AE1C2CFD0827009EDB8D /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,9 +78,6 @@
 			);
 			name = "Bosta Task";
 			packageProductDependencies = (
-				1CF3AE162CFD06EE009EDB8D /* CombineCocoa */,
-				1CF3AE192CFD0827009EDB8D /* CombineMoya */,
-				1CF3AE1B2CFD0827009EDB8D /* Moya */,
 			);
 			productName = "Bosta Task";
 			productReference = 1CF3ADF32CFCF9D3009EDB8D /* Bosta Task.app */;
@@ -120,8 +108,6 @@
 			mainGroup = 1CF3ADEA2CFCF9D3009EDB8D;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				1CF3AE152CFD06EE009EDB8D /* XCRemoteSwiftPackageReference "CombineCocoa" */,
-				1CF3AE182CFD0827009EDB8D /* XCRemoteSwiftPackageReference "Moya" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1CF3ADF42CFCF9D3009EDB8D /* Products */;
@@ -363,43 +349,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		1CF3AE152CFD06EE009EDB8D /* XCRemoteSwiftPackageReference "CombineCocoa" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/CombineCommunity/CombineCocoa.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.4.1;
-			};
-		};
-		1CF3AE182CFD0827009EDB8D /* XCRemoteSwiftPackageReference "Moya" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Moya/Moya.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 15.0.3;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		1CF3AE162CFD06EE009EDB8D /* CombineCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1CF3AE152CFD06EE009EDB8D /* XCRemoteSwiftPackageReference "CombineCocoa" */;
-			productName = CombineCocoa;
-		};
-		1CF3AE192CFD0827009EDB8D /* CombineMoya */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1CF3AE182CFD0827009EDB8D /* XCRemoteSwiftPackageReference "Moya" */;
-			productName = CombineMoya;
-		};
-		1CF3AE1B2CFD0827009EDB8D /* Moya */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1CF3AE182CFD0827009EDB8D /* XCRemoteSwiftPackageReference "Moya" */;
-			productName = Moya;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1CF3ADEB2CFCF9D3009EDB8D /* Project object */;
 }

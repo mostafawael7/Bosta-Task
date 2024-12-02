@@ -45,6 +45,10 @@ struct Address: Codable {
         case zipcode = "zipcode"
         case geo = "geo"
     }
+    
+    func getFullAddress() -> String {
+        return [street, suite, city, zipcode].compactMap { $0 }.joined(separator: ", ")
+    }
 }
 
 // MARK: - Geo
