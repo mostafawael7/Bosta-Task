@@ -9,14 +9,14 @@ import UIKit
 import Combine
 
 class ProfileVC: UIViewController {
+    private let userViewModel = UserViewModel()
+    private let albumsViewModel = AlbumsViewModel()
+    private var cancellables = Set<AnyCancellable>()
+    
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var addressLbl: UILabel!
     @IBOutlet weak var tableView: UITableView!
     private let cellID = "AlbumsTableViewCell"
-    
-    private let userViewModel = UserViewModel()
-    private let albumsViewModel = AlbumsViewModel()
-    private var cancellables = Set<AnyCancellable>()
     
     var randomID = Int.random(in: 1...10)
     
@@ -36,7 +36,6 @@ class ProfileVC: UIViewController {
     }
     
     private func bindViewModels() {
-        // Bind UserViewModel
         userViewModel.$user
             .sink { [weak self] user in
                 guard let user = user else { return }
@@ -52,10 +51,10 @@ class ProfileVC: UIViewController {
             }
             .store(in: &cancellables)
         
-        // Bind AlbumsViewModel
         albumsViewModel.$albums
             .sink { [weak self] albums in
                 DispatchQueue.main.async{
+//                    self?.hideAnimatedActivityIndicatorView()
                     self?.tableView.reloadData()
                 }
             }
@@ -73,6 +72,7 @@ class ProfileVC: UIViewController {
     private func updateUI(user: User){
         nameLbl.text = user.name ?? "-"
         addressLbl.text = "\(user.address?.getFullAddress() ?? "-")"
+//        hideAnimatedActivityIndicatorView()
     }
     @IBAction func refreshBtnClicked(_ sender: UIButton) {
         randomID = Int.random(in: 1...10)
@@ -100,9 +100,13 @@ extension ProfileVC: UITableViewDataSource, UITableViewDelegate {
         cell.nameLbl.text = albumsViewModel.albums?[indexPath.row].title ?? "-"
         return cell
     }
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        // Handle album selection if needed
+        let dest = self.storyboard?.instantiateViewController(withIdentifier: "GalleryVC") as! GalleryVC
+        dest.albumTitle = (albumsViewModel.albums?[indexPath.row].title)!
+        dest.albumID = (albumsViewModel.albums?[indexPath.row].id)!
+        dest.modalPresentationStyle = .fullScreen
+        self.present(dest, animated: true)
     }
 }

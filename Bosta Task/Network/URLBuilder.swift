@@ -25,4 +25,7 @@ extension URLBuilder {
     static func albums(by userID: Int) -> URL? {
         return endpoint(for: "/users/\(userID)/albums")
     }
+    static func photos(by albumID: Int) -> URL? {
+        return endpoint(for: "/albums/\(albumID)/photos")
+    }
 }
