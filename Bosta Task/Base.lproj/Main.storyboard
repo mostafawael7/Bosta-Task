@@ -184,9 +184,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9uQ-LA-PnV">
                                 <rect key="frame" x="8" y="59" width="377" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVJ-sk-zaz">
-                                        <rect key="frame" x="343" y="7.1054273576010019e-15" width="26" height="29.333333333333336"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVJ-sk-zaz">
+                                        <rect key="frame" x="351" y="0.0" width="26" height="30.333333333333332"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="square.and.arrow.up" catalog="system">
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="23"/>
@@ -207,7 +206,9 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="eVJ-sk-zaz" firstAttribute="top" secondItem="9uQ-LA-PnV" secondAttribute="top" id="5lu-jH-eaj"/>
                                     <constraint firstItem="zLo-8C-Jz2" firstAttribute="leading" secondItem="9uQ-LA-PnV" secondAttribute="leading" id="7Eh-Dk-Rno"/>
+                                    <constraint firstAttribute="trailing" secondItem="eVJ-sk-zaz" secondAttribute="trailing" id="Rw2-ph-Q6B"/>
                                     <constraint firstItem="zLo-8C-Jz2" firstAttribute="top" secondItem="9uQ-LA-PnV" secondAttribute="top" id="YpI-8m-wDJ"/>
                                     <constraint firstAttribute="height" constant="30" id="tEK-hc-PhS"/>
                                 </constraints>
